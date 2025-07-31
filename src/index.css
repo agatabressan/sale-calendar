@@ -6,116 +6,106 @@
 
 @layer base {
   :root {
-    /* Premium neutral palette */
-    --background: 0 0% 98%;
-    --foreground: 220 15% 12%;
+    /* HyperCash Brand Colors */
+    --hypercash-green: 77 75% 72%;     /* #CDEA80 - Green Hyper */
+    --hypercash-black: 210 13% 9%;     /* #101820 - Black Hyper */
+    --hypercash-white: 0 0% 100%;      /* #FFFFFF - White */
+    --hypercash-green-alt: 95 71% 51%; /* #44D62C - Secondary Green */
+    --hypercash-dark-green: 95 100% 10%; /* #163300 - Dark Green */
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 15% 12%;
+    /* Background and surface colors */
+    --background: var(--hypercash-white);
+    --foreground: var(--hypercash-black);
+    --card: var(--hypercash-white);
+    --card-foreground: var(--hypercash-black);
+    --popover: var(--hypercash-white);
+    --popover-foreground: var(--hypercash-black);
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 15% 12%;
+    /* Primary brand colors */
+    --primary: var(--hypercash-green);
+    --primary-foreground: var(--hypercash-black);
+    --primary-glow: var(--hypercash-green-alt);
 
-    /* Premium blue-gray primary */
-    --primary: 215 28% 17%;
-    --primary-foreground: 0 0% 98%;
-    --primary-glow: 215 28% 25%;
+    /* Secondary colors */
+    --secondary: 210 11% 96%;
+    --secondary-foreground: var(--hypercash-black);
 
-    /* Soft secondary */
-    --secondary: 210 15% 95%;
-    --secondary-foreground: 220 15% 12%;
+    /* Accent colors */
+    --accent: var(--hypercash-green);
+    --accent-foreground: var(--hypercash-black);
+    --accent-light: var(--hypercash-green-alt);
 
-    /* Muted tones */
-    --muted: 210 10% 92%;
-    --muted-foreground: 215 15% 55%;
+    /* Muted colors */
+    --muted: 210 11% 96%;
+    --muted-foreground: 210 6% 46%;
 
-    /* Premium accent */
-    --accent: 34 90% 65%;
-    --accent-foreground: 220 15% 12%;
-    --accent-light: 34 90% 95%;
-
-    /* Success & warning */
-    --success: 142 76% 36%;
-    --success-foreground: 0 0% 98%;
+    /* Success, warning, destructive */
+    --success: var(--hypercash-green-alt);
+    --success-foreground: var(--hypercash-white);
     --warning: 45 93% 58%;
-    --warning-foreground: 220 15% 12%;
-
-    --destructive: 0 72% 51%;
+    --warning-foreground: 45 30% 11%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 215 15% 88%;
-    --input: 215 15% 88%;
-    --ring: 215 28% 17%;
+    /* Borders and inputs */
+    --border: 210 11% 90%;
+    --input: 210 11% 90%;
+    --ring: var(--hypercash-green);
 
     --radius: 0.75rem;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-light)));
+    --gradient-primary: linear-gradient(135deg, hsl(var(--hypercash-green)), hsl(var(--hypercash-green-alt)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--hypercash-green)), hsl(var(--hypercash-green-alt)));
     --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
 
     /* Shadows */
-    --shadow-soft: 0 2px 8px hsl(var(--primary) / 0.08);
-    --shadow-medium: 0 4px 20px hsl(var(--primary) / 0.12);
-    --shadow-strong: 0 8px 32px hsl(var(--primary) / 0.16);
+    --shadow-soft: 0 2px 8px rgba(16, 24, 32, 0.08);
+    --shadow-medium: 0 4px 20px rgba(16, 24, 32, 0.12);
+    --shadow-strong: 0 8px 32px rgba(16, 24, 32, 0.16);
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar specific */
+    --sidebar-background: var(--hypercash-white);
+    --sidebar-foreground: var(--hypercash-black);
+    --sidebar-primary: var(--hypercash-green);
+    --sidebar-primary-foreground: var(--hypercash-black);
+    --sidebar-accent: 210 11% 96%;
+    --sidebar-accent-foreground: var(--hypercash-black);
+    --sidebar-border: 210 11% 90%;
+    --sidebar-ring: var(--hypercash-green);
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode mantém o preto HyperCash como base */
+    --background: var(--hypercash-black);
+    --foreground: var(--hypercash-white);
+    --card: 210 13% 11%;
+    --card-foreground: var(--hypercash-white);
+    --popover: 210 13% 11%;
+    --popover-foreground: var(--hypercash-white);
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    /* Accent colors */
+    --accent: 210 13% 15%;
+    --accent-foreground: var(--hypercash-white);
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    /* Muted colors */
+    --muted: 210 13% 15%;
+    --muted-foreground: 210 9% 63%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    /* Borders and inputs */
+    --border: 210 13% 18%;
+    --input: 210 13% 18%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar specific */
+    --sidebar-background: 210 13% 11%;
+    --sidebar-foreground: var(--hypercash-white);
+    --sidebar-accent: 210 13% 15%;
+    --sidebar-accent-foreground: var(--hypercash-white);
+    --sidebar-border: 210 13% 18%;
   }
 }
 

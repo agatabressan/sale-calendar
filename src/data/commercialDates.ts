@@ -2,387 +2,290 @@ export interface CommercialDate {
   id: string;
   title: string;
   date: string;
+  day: number;
   month: number;
-  quarter: number;
+  category: 'major' | 'seasonal' | 'niche' | 'international';
   context: string;
   campaigns: string[];
   channels: string[];
   creatives: string[];
   promotions: string[];
-  category: 'major' | 'seasonal' | 'niche';
+  preparation: string;
+  physicalProducts: string[];
+  digitalProducts: string[];
 }
 
 export const commercialDates: CommercialDate[] = [
-  // Janeiro
   {
-    id: 'liquidacao-janeiro',
-    title: 'Liquidação de Janeiro',
-    date: '01/01 - 31/01',
+    id: '1',
+    title: 'Ano Novo',
+    date: '1º de Janeiro',
+    day: 1,
     month: 1,
-    quarter: 1,
     category: 'major',
-    context: 'Período pós-festas onde consumidores buscam renovar guarda-roupa e casa com preços baixos. Momento ideal para desovar estoque do ano anterior.',
+    context: 'Período de renovação e novos objetivos. Ideal para vendas de produtos relacionados à mudança de hábitos, organização e bem-estar.',
     campaigns: [
-      'Liquidação de até 70% em toda loja',
-      'Combo "Renovação": 3 peças por preço especial',
-      'Frete grátis para compras acima de R$ 99',
-      'Kit "Novo Ano, Novo Eu" com produtos de autocuidado',
-      'Promoção "Saldão Relâmpago" por 48h'
+      'Resolução de Ano Novo - produtos para organização',
+      'Detox digital - cursos e aplicativos',
+      'Vida saudável - suplementos e equipamentos fitness',
+      'Renovação do guarda-roupa - moda e acessórios',
+      'Planos e metas 2025 - planejadores e agendas'
     ],
-    channels: ['Meta Ads', 'Google Ads', 'Email Marketing', 'WhatsApp Business', 'Stories Instagram'],
+    channels: ['Meta Ads', 'Google Ads', 'E-mail Marketing', 'WhatsApp Business', 'Influencers'],
     creatives: [
-      '"Renove seu guarda-roupa sem pesar no bolso"',
-      '"Liquidação Imperdível: Últimas peças com 70% OFF"',
-      '"Novo ano, nova você! Aproveite os menores preços"',
-      'Vídeos de antes/depois com produtos em promoção'
+      '"2025 chegou! Hora de conquistar seus objetivos"',
+      '"Novo ano, nova versão de você"',
+      '"Comece 2025 do jeito certo"',
+      '"Transforme suas metas em realidade"'
     ],
     promotions: [
-      'Desconto progressivo: 50%, 60%, 70% na 3ª peça',
-      'Frete grátis + parcelamento sem juros',
-      'Cashback de 15% para próxima compra',
-      'Troca facilitada até 60 dias'
-    ]
+      'Desconto progressivo: quanto mais comprar, maior o desconto',
+      'Kit completo para começar bem o ano',
+      'Primeira compra de 2025 com frete grátis',
+      'Parcelamento em até 12x sem juros'
+    ],
+    preparation: '15-20 dias antes',
+    physicalProducts: ['Organizadores', 'Agendas', 'Produtos fitness', 'Suplementos', 'Roupas esportivas'],
+    digitalProducts: ['Cursos online', 'E-books de produtividade', 'Apps de organização', 'Planejadores digitais']
   },
-  // Fevereiro
   {
-    id: 'carnaval',
+    id: '2',
     title: 'Carnaval',
-    date: '12/02 - 17/02',
+    date: '28 de Fevereiro',
+    day: 28,
     month: 2,
-    quarter: 1,
-    category: 'seasonal',
-    context: 'Época de fantasias, acessórios, roupas coloridas e produtos para festa. Movimento forte em cosméticos, bebidas e decoração.',
-    campaigns: [
-      'Coleção Carnaval: fantasias e acessórios',
-      'Kit festa: decoração + bebidas + snacks',
-      'Looks de Carnaval para diferentes perfis',
-      'Promoção "Cai no samba" com produtos temáticos',
-      'Bundle "Bloco da sua marca" com itens personalizados'
-    ],
-    channels: ['Instagram Reels', 'TikTok Ads', 'Meta Ads', 'Influenciadores', 'WhatsApp'],
-    creatives: [
-      '"Seu Carnaval começa aqui! ✨"',
-      '"Brilhe no bloco com nossa coleção exclusiva"',
-      '"Carnaval 2024: looks que vão bombar na festa"',
-      'Vídeos de transformação com maquiagem de Carnaval'
-    ],
-    promotions: [
-      'Compre 2 fantasias e ganhe acessórios grátis',
-      '30% OFF em toda linha Carnaval',
-      'Frete expresso gratuito para cidades do Rio e Salvador',
-      'Kit customização: personalize sua fantasia'
-    ]
-  },
-  // Março
-  {
-    id: 'dia-da-mulher',
-    title: 'Dia Internacional da Mulher',
-    date: '08/03',
-    month: 3,
-    quarter: 1,
     category: 'major',
-    context: 'Data comemorativa com forte apelo emocional. Momento ideal para produtos de beleza, autocuidado, moda feminina e experiências.',
+    context: 'Maior festa popular do Brasil. Excelente para vendas de fantasias, acessórios, produtos de beleza e itens para festa.',
     campaigns: [
-      'Coleção especial "Força Feminina"',
-      'Kit autocuidado e bem-estar',
-      'Promoção "Mulheres que inspiram"',
-      'Combo presente: 3 produtos escolhidos por ela',
-      'Campanha de empoderamento com influenciadoras'
+      'Fantasias criativas e originais',
+      'Maquiagem e produtos de beleza para festa',
+      'Acessórios carnavalescos',
+      'Decoração para festas caseiras',
+      'Produtos para pós-carnaval (detox, cuidados)'
     ],
-    channels: ['Meta Ads', 'Pinterest Ads', 'Email Marketing', 'Stories Instagram', 'Google Shopping'],
+    channels: ['Meta Ads', 'Instagram', 'TikTok', 'WhatsApp Business', 'Google Ads'],
     creatives: [
-      '"Celebre sua força e beleza única"',
-      '"Dia da Mulher: você merece ser celebrada todos os dias"',
-      '"Autoestima em alta com nossa coleção especial"',
-      'Vídeos de depoimentos de clientes empoderadas'
+      '"Brilhe no carnaval com nossos produtos"',
+      '"Sua fantasia dos sonhos está aqui"',
+      '"Carnaval 2025: seja a atração da festa"',
+      '"Do makeup às fantasias, temos tudo"'
     ],
     promotions: [
-      'Compre 1 leve 2 em produtos selecionados',
-      'Desconto de 25% + brinde exclusivo',
-      'Parcelamento especial em até 6x sem juros',
-      'Frete grátis para todo Brasil'
-    ]
-  },
-  // Abril
-  {
-    id: 'pascoa',
-    title: 'Páscoa',
-    date: '31/03',
-    month: 4,
-    quarter: 2,
-    category: 'seasonal',
-    context: 'Tradição familiar com forte consumo de chocolates, presentes infantis e decoração temática. Oportunidade para bundling e cross-selling.',
-    campaigns: [
-      'Coleção Páscoa: chocolates artesanais',
-      'Kit família: ovos + brincadeiras',
-      'Decoração temática para casa',
-      'Cestas personalizadas para presente',
-      'Promoção "Caça aos ovos" com descontos escondidos'
+      'Combo fantasia + acessórios com desconto',
+      'Frete expresso para última hora',
+      'Desconto progressivo: compre mais, pague menos',
+      '2ª via da fantasia por metade do preço'
     ],
-    channels: ['Google Ads', 'Meta Ads', 'Email Marketing', 'WhatsApp Business', 'Pinterest'],
-    creatives: [
-      '"Páscoa doce e especial para toda família"',
-      '"Momentos únicos merecem sabores únicos"',
-      '"Sua Páscoa mais saborosa está aqui"',
-      'Vídeos de famílias celebrando com produtos da marca'
-    ],
-    promotions: [
-      'Na compra de 2 ovos, ganhe 1 brinde',
-      'Desconto de 20% em cestas acima de R$ 150',
-      'Frete grátis + embalagem especial',
-      'Troca garantida até dia 15 de abril'
-    ]
+    preparation: '30-45 dias antes',
+    physicalProducts: ['Fantasias', 'Maquiagem', 'Acessórios', 'Purpurina', 'Decoração'],
+    digitalProducts: ['Tutoriais de maquiagem', 'Playlists de carnaval', 'Filtros para redes sociais']
   },
-  // Maio
   {
-    id: 'dia-das-maes',
+    id: '3',
     title: 'Dia das Mães',
-    date: '12/05',
+    date: '11 de Maio',
+    day: 11,
     month: 5,
-    quarter: 2,
     category: 'major',
-    context: 'Uma das datas mais importantes do e-commerce brasileiro. Alta conversão em presentes, flores, joias, perfumes e experiências.',
+    context: 'Terceira maior data comercial do Brasil. Foco em presentes especiais, experiências e produtos para o lar.',
     campaigns: [
-      'Presente perfeito para cada tipo de mãe',
-      'Kit "Mãe Especial" personalizado',
-      'Experiências inesquecíveis para mães',
-      'Coleção "Amor de Mãe" exclusiva',
-      'Guia de presentes por faixa de preço'
+      'Presentes únicos para mães',
+      'Experiências relaxantes (spa, massagem)',
+      'Produtos para casa e decoração',
+      'Joias e acessórios especiais',
+      'Tecnologia que facilita a vida'
     ],
-    channels: ['Google Ads', 'Meta Ads', 'Email Marketing', 'YouTube Ads', 'Influenciadores'],
+    channels: ['Meta Ads', 'Google Ads', 'E-mail Marketing', 'WhatsApp Business', 'TV'],
     creatives: [
       '"Para a mulher mais especial da sua vida"',
-      '"Dia das Mães: demonstre seu amor com o presente perfeito"',
-      '"Sua mãe merece o melhor, e nós temos"',
-      'Vídeos emocionais de filhos presenteando mães'
+      '"Mãe: amor incondicional merece presente especial"',
+      '"Demonstre sua gratidão com carinho"',
+      '"Toda mãe merece ser rainha"'
     ],
     promotions: [
-      'Desconto de 30% + frete grátis',
-      'Parcelamento em até 10x sem juros',
-      'Embalagem premium gratuita',
-      'Garantia de entrega até 11/05'
-    ]
+      'Kit especial dia das mães',
+      'Embalagem premium de presente grátis',
+      'Parcelamento sem juros especial',
+      'Entrega garantida no domingo'
+    ],
+    preparation: '20-30 dias antes',
+    physicalProducts: ['Joias', 'Perfumes', 'Produtos para casa', 'Eletrônicos', 'Flores'],
+    digitalProducts: ['Vouchers de spa', 'Cursos online', 'Assinaturas de streaming', 'Apps de bem-estar']
   },
-  // Junho
   {
-    id: 'dia-dos-namorados',
+    id: '4',
     title: 'Dia dos Namorados',
-    date: '12/06',
+    date: '12 de Junho',
+    day: 12,
     month: 6,
-    quarter: 2,
     category: 'major',
-    context: 'Data romântica brasileira com alto potencial de vendas em presentes para casais, lingerie, perfumes, joias e experiências.',
+    context: 'Segunda maior data comercial do Brasil. Foco em presentes românticos, experiências e produtos para casais.',
     campaigns: [
-      'Presentes românticos para casais',
-      'Kit "Noite Especial" para dois',
-      'Coleção exclusiva "Amor em Detalhes"',
-      'Experiências românticas a dois',
-      'Combo "Seu amor merece" personalizado'
+      'Presentes românticos únicos',
+      'Experiências para casais',
+      'Kits românticos personalizados',
+      'Jantares e escapadas românticas',
+      'Joias e acessórios especiais'
     ],
-    channels: ['Meta Ads', 'Google Ads', 'Pinterest Ads', 'Instagram Shopping', 'Email Marketing'],
+    channels: ['Meta Ads', 'Google Ads', 'E-mail Marketing', 'Pinterest', 'WhatsApp Business'],
     creatives: [
-      '"Demonstre seu amor com presentes únicos"',
-      '"Dia dos Namorados: momentos especiais merecem presentes especiais"',
-      '"Seu amor é único, seu presente também deve ser"',
-      'Vídeos de casais usando/recebendo produtos'
+      '"Demonstre seu amor de forma especial"',
+      '"O presente perfeito para quem você ama"',
+      '"Namorados 2025: criando momentos únicos"',
+      '"Amor em cada detalhe do presente"'
     ],
     promotions: [
-      'Compre para ele e para ela com 40% OFF',
-      'Kit casal: 2 produtos pelo preço de 1',
-      'Frete expresso grátis + embalagem romântica',
-      'Desconto progressivo: quanto mais comprar, mais economiza'
-    ]
-  },
-  // Julho
-  {
-    id: 'ferias-julho',
-    title: 'Férias de Julho',
-    date: '01/07 - 31/07',
-    month: 7,
-    quarter: 3,
-    category: 'seasonal',
-    context: 'Período de férias escolares com foco em viagem, roupas de inverno, entretenimento infantil e produtos para atividades familiares.',
-    campaigns: [
-      'Coleção inverno: roupas quentinhas',
-      'Kit viagem: essenciais para férias',
-      'Entretenimento em casa para crianças',
-      'Produtos para dias frios e aconchegantes',
-      'Promoção "Férias em família"'
+      'Kit romântico com desconto especial',
+      'Compre um ganhe outro para casais',
+      'Parcelamento sem juros em presentes',
+      'Embalagem premium grátis'
     ],
-    channels: ['Google Ads', 'Meta Ads', 'YouTube Ads', 'Email Marketing', 'WhatsApp'],
-    creatives: [
-      '"Férias de julho mais quentinhas e divertidas"',
-      '"Inverno chegou: aqueça-se com estilo"',
-      '"Diversão garantida para toda família"',
-      'Vídeos de famílias aproveitando produtos em casa'
-    ],
-    promotions: [
-      'Liquidação de inverno: até 50% OFF',
-      'Compre 3 peças de frio e ganhe 1',
-      'Frete grátis para todo Brasil',
-      'Kit família: descontos especiais para compras em grupo'
-    ]
+    preparation: '20-30 dias antes',
+    physicalProducts: ['Joias', 'Perfumes', 'Chocolates', 'Flores', 'Presentes personalizados'],
+    digitalProducts: ['Cursos para casais', 'Playlists românticas', 'Vouchers de experiência']
   },
-  // Agosto
   {
-    id: 'dia-dos-pais',
+    id: '5',
     title: 'Dia dos Pais',
-    date: '11/08',
+    date: '10 de Agosto',
+    day: 10,
     month: 8,
-    quarter: 3,
     category: 'major',
-    context: 'Data importante para presentes masculinos: eletrônicos, ferramentas, roupas, perfumes e experiências voltadas ao público masculino.',
+    context: 'Quarta maior data comercial do Brasil. Foco em presentes masculinos, tecnologia e experiências.',
     campaigns: [
-      'Presentes para todos os tipos de pai',
-      'Coleção "Pai Herói" exclusiva',
-      'Kit "Momento Pai e Filho"',
-      'Experiências únicas para pais',
-      'Guia do presente perfeito por hobby'
+      'Presentes tecnológicos para pais',
+      'Roupas e acessórios masculinos',
+      'Experiências para pais (churrasco, esportes)',
+      'Ferramentas e equipamentos',
+      'Produtos para carros'
     ],
-    channels: ['Google Ads', 'Meta Ads', 'YouTube Ads', 'Email Marketing', 'WhatsApp Business'],
+    channels: ['Meta Ads', 'Google Ads', 'YouTube Ads', 'E-mail Marketing', 'WhatsApp Business'],
     creatives: [
-      '"Para o herói da sua vida"',
-      '"Dia dos Pais: presentes à altura do seu amor"',
-      '"Seu pai merece o melhor presente"',
-      'Vídeos de filhos surpreendendo pais'
+      '"Para o homem mais importante da sua vida"',
+      '"Pai: exemplo de força e dedicação"',
+      '"Presente especial para quem é especial"',
+      '"Mostre sua gratidão ao seu herói"'
     ],
     promotions: [
-      'Desconto de 35% em produtos masculinos',
-      'Parcelamento em até 8x sem juros',
-      'Frete grátis + embalagem especial',
-      'Garantia estendida para eletrônicos'
-    ]
-  },
-  // Setembro
-  {
-    id: 'primavera',
-    title: 'Chegada da Primavera',
-    date: '22/09',
-    month: 9,
-    quarter: 3,
-    category: 'seasonal',
-    context: 'Renovação e mudança de estação. Momento ideal para roupas coloridas, decoração, jardinagem e produtos de beleza.',
-    campaigns: [
-      'Coleção Primavera: cores vibrantes',
-      'Kit "Renovação": casa e guarda-roupa',
-      'Produtos para jardim e plantas',
-      'Linha "Florescer" de beleza',
-      'Decoração primaveril para casa'
+      'Kit dia dos pais com desconto',
+      'Parcelamento especial sem juros',
+      'Embalagem de presente grátis',
+      'Entrega garantida no domingo'
     ],
-    channels: ['Instagram Reels', 'Pinterest Ads', 'Meta Ads', 'Google Shopping', 'Email Marketing'],
-    creatives: [
-      '"Primavera chegou: renove-se com cores vibrantes"',
-      '"Floresça com nossa nova coleção"',
-      '"Sua casa mais florida e colorida"',
-      'Vídeos de transformação de ambientes'
-    ],
-    promotions: [
-      'Coleção Primavera com 25% OFF',
-      'Kit renovação: desconto progressivo',
-      'Frete grátis em plantas e vasos',
-      'Troca de produtos de inverno por primavera'
-    ]
+    preparation: '20-25 dias antes',
+    physicalProducts: ['Eletrônicos', 'Roupas masculinas', 'Ferramentas', 'Acessórios para carro', 'Produtos esportivos'],
+    digitalProducts: ['Cursos online', 'Assinaturas de streaming', 'Apps esportivos', 'E-books']
   },
-  // Outubro
   {
-    id: 'dia-das-criancas',
+    id: '6',
     title: 'Dia das Crianças',
-    date: '12/10',
+    date: '12 de Outubro',
+    day: 12,
     month: 10,
-    quarter: 4,
     category: 'major',
-    context: 'Data dedicada ao público infantil com alta demanda por brinquedos, roupas, doces e experiências para crianças.',
+    context: 'Data dedicada às crianças. Foco em brinquedos, roupas infantis e produtos educativos.',
     campaigns: [
-      'Brinquedos educativos e divertidos',
-      'Roupas infantis temáticas',
-      'Kit "Diversão em Casa"',
-      'Experiências para crianças',
-      'Doces e guloseimas especiais'
+      'Brinquedos e jogos infantis',
+      'Roupas e calçados para crianças',
+      'Produtos educativos e pedagógicos',
+      'Livros e material didático infantil',
+      'Eletrônicos e gadgets para crianças'
     ],
-    channels: ['YouTube Kids', 'Meta Ads', 'Google Ads', 'WhatsApp Business', 'Influenciadores infantis'],
+    channels: ['Meta Ads', 'YouTube Ads', 'Google Ads', 'WhatsApp Business', 'TV'],
     creatives: [
-      '"Dia das Crianças: diversão garantida!"',
-      '"Presentes que despertam sorrisos"',
-      '"Childhood magic begins here"',
-      'Vídeos de crianças brincando com produtos'
+      '"Toda criança merece sorrir"',
+      '"Presentes que fazem a diferença"',
+      '"Alegria e diversão garantidas"',
+      '"Para os pequenos grandes sonhadores"'
     ],
     promotions: [
-      'Compre 2 brinquedos e ganhe 1',
-      'Desconto de 40% em roupas infantis',
-      'Frete grátis + embalagem colorida',
-      'Parcelamento especial em até 6x'
-    ]
+      'Kit dia das crianças completo',
+      'Compre 1 brinquedo leve 2',
+      'Parcelamento sem juros',
+      'Embalagem de presente grátis'
+    ],
+    preparation: '20-30 dias antes',
+    physicalProducts: ['Brinquedos', 'Roupas infantis', 'Livros infantis', 'Eletrônicos', 'Material escolar'],
+    digitalProducts: ['Jogos educativos', 'Apps infantis', 'Conteúdo educativo', 'Filmes infantis']
   },
-  // Novembro
   {
-    id: 'black-friday',
+    id: '7',
     title: 'Black Friday',
-    date: '29/11',
+    date: '28 de Novembro',
+    day: 28,
     month: 11,
-    quarter: 4,
     category: 'major',
-    context: 'Maior evento de vendas do ano. Consumidores esperam grandes descontos e fazem compras antecipadas para o Natal.',
+    context: 'Maior data do e-commerce brasileiro. Descontos massivos e oportunidade de liquidar estoque.',
     campaigns: [
-      'Mega liquidação com até 80% OFF',
-      'Ofertas relâmpago por tempo limitado',
-      'Black Week: 7 dias de ofertas',
-      'Combo Black: produtos em super promoção',
-      'Cyber Monday: ofertas digitais exclusivas'
+      'Descontos de até 70% em categorias estratégicas',
+      'Flash sales por tempo limitado',
+      'Kits promocionais exclusivos',
+      'Antecipação para clientes VIP',
+      'Queima de estoque geral'
     ],
-    channels: ['Todos os canais disponíveis', 'Google Ads', 'Meta Ads', 'Email Marketing', 'Push Notifications'],
+    channels: ['Todos os canais digitais', 'TV', 'Rádio', 'Marketplace', 'Comparadores'],
     creatives: [
-      '"Black Friday: os menores preços do ano"',
-      '"Última chance de economizar BIG"',
-      '"Black Friday 2024: ofertas históricas"',
-      'Vídeos com countdown e ofertas relâmpago'
+      '"Black Friday 2025: economize como nunca"',
+      '"Descontos históricos por tempo limitado"',
+      '"A oportunidade do ano chegou"',
+      '"Não perca: ofertas imperdíveis"'
     ],
     promotions: [
-      'Descontos progressivos até 80%',
+      'Até 70% de desconto',
       'Frete grátis para todo Brasil',
-      'Parcelamento em até 12x sem juros',
-      'Cashback especial de 20%'
-    ]
-  },
-  // Dezembro
-  {
-    id: 'natal',
-    title: 'Natal',
-    date: '25/12',
-    month: 12,
-    quarter: 4,
-    category: 'major',
-    context: 'Época de presentes, confraternizações e celebrações. Maior movimento do ano com foco em presentes para toda família.',
-    campaigns: [
-      'Guia completo de presentes de Natal',
-      'Decoração natalina para casa',
-      'Kit "Ceia Perfeita"',
-      'Presentes de última hora',
-      'Amigo secreto: opções para todos os orçamentos'
+      'Parcelamento em até 24x',
+      'Cashback em compras acima de R$ 500'
     ],
-    channels: ['Google Ads', 'Meta Ads', 'Email Marketing', 'WhatsApp Business', 'YouTube Ads'],
+    preparation: '45-60 dias antes',
+    physicalProducts: ['Eletrônicos', 'Moda', 'Casa e decoração', 'Esportes', 'Beleza'],
+    digitalProducts: ['Cursos online', 'Software', 'Assinaturas', 'E-books', 'Apps premium']
+  },
+  {
+    id: '8',
+    title: 'Natal',
+    date: '25 de Dezembro',
+    day: 25,
+    month: 12,
+    category: 'major',
+    context: 'Principal data comercial do varejo. Foco em presentes, ceia e decoração natalina.',
+    campaigns: [
+      'Presentes para toda família',
+      'Decoração natalina completa',
+      'Produtos para ceia de natal',
+      'Roupas para festividades',
+      'Experiências e viagens de natal'
+    ],
+    channels: ['Todos os canais', 'TV', 'Rádio', 'Outdoor', 'Marketplace'],
     creatives: [
-      '"Natal 2024: presentes que emocionam"',
-      '"Magia do Natal começa aqui"',
-      '"Últimos dias para garantir seu presente"',
-      'Vídeos de famílias celebrando o Natal'
+      '"Natal 2025: momentos mágicos em família"',
+      '"O presente perfeito está aqui"',
+      '"Magia do natal em cada produto"',
+      '"Celebre o amor e a união"'
     ],
     promotions: [
-      'Presentes de Natal com 30% OFF',
-      'Embalagem natalina gratuita',
-      'Entrega garantida até 23/12',
-      'Troca facilitada até 15/01'
-    ]
+      'Kit presente família completo',
+      'Embalagem de natal grátis',
+      'Parcelamento especial sem juros',
+      'Entrega garantida até 24/12'
+    ],
+    preparation: '60-90 dias antes',
+    physicalProducts: ['Presentes diversos', 'Decoração natalina', 'Alimentos', 'Roupas festivas', 'Eletrônicos'],
+    digitalProducts: ['Vouchers de experiência', 'Cursos online', 'Entretenimento digital', 'Apps premium']
   }
 ];
-
-export const getDatesByQuarter = (quarter: number): CommercialDate[] => {
-  return commercialDates.filter(date => date.quarter === quarter);
-};
 
 export const getDatesByMonth = (month: number): CommercialDate[] => {
   return commercialDates.filter(date => date.month === month);
 };
 
-export const getDatesByCategory = (category: 'major' | 'seasonal' | 'niche'): CommercialDate[] => {
-  return commercialDates.filter(date => date.category === category);
+export const getDatesByQuarter = (quarter: number): CommercialDate[] => {
+  const quarterMonths = {
+    1: [1, 2, 3],
+    2: [4, 5, 6], 
+    3: [7, 8, 9],
+    4: [10, 11, 12]
+  };
+  
+  const months = quarterMonths[quarter as keyof typeof quarterMonths] || [];
+  return commercialDates.filter(date => months.includes(date.month));
 };
